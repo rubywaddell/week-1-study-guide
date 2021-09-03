@@ -19,25 +19,27 @@ def print_list(items):
     for item in items:
         print(item)
 
-# def long_words(words):
-#     """Return words in input list that longer than 4 characters.
+def long_words(words):
+    """Return words in input list that longer than 4 characters.
     
-#     For example::
+    For example::
     
-#         >>> long_words(["hello", "a", "b", "hi", "bacon", "bacon"])
-#         ['hello', 'bacon', 'bacon']
+        >>> long_words(["hello", "a", "b", "hi", "bacon", "bacon"])
+        ['hello', 'bacon', 'bacon']
     
-#     (If there are duplicates, show both --- notice "bacon" appears
-#     twice in output)
+    (If there are duplicates, show both --- notice "bacon" appears
+    twice in output)
     
-#     If no words are longer than 4 characters, return an empty list::
+    If no words are longer than 4 characters, return an empty list::
     
-#         >>> long_words(["all", "are", "tiny"])
-#         []
-#     """
-
-#     return ['the wrong thing']
-
+        >>> long_words(["all", "are", "tiny"])
+        []
+    """
+    long_words = []
+    for word in words:
+        if len(word) > 4:
+            long_words.append(word)
+    return long_words
 
 # def n_long_words(words, n):
 #     """Return words in list longer than `n` characters.
