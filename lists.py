@@ -281,7 +281,8 @@ def reverse_list(items):
         >>> orig
         ['apple', 'berry', 'cherry']
     """
-    return items[::-1]
+    backwards = items[::-1]
+    return backwards
 
 # def reverse_list_in_place(items):
 #     """Reverse the input list `in place`.
@@ -302,35 +303,38 @@ def reverse_list(items):
 #         >>> orig
 #         ['I', 'love', 'cookies']
 #     """
+#     items = items[::-1]
+#     return items
+#NEED TO COME BACK TO THIS ONE, WHY ISN'T IT WORKING!?!???!?!!?
 
-#     return []
-
-
-# def duplicates(items):
-#     """Return list of words from input list which were duplicates.
-#     Return a list of words which are duplicated in the input list.
-#     The returned list should be in ascending order.
+def duplicates(items):
+    """Return list of words from input list which were duplicates.
+    Return a list of words which are duplicated in the input list.
+    The returned list should be in ascending order.
    
-#     For example::
+    For example::
    
-#         >>> duplicates(
-#         ...     ["apple", "banana", "banana", "cherry", "apple"]
-#         ... )
-#         ['apple', 'banana']
-#         >>> duplicates([1, 2, 2, 4, 4, 4, 7])
-#         [2, 4]
+        >>> duplicates(
+        ...     ["apple", "banana", "banana", "cherry", "apple"]
+        ... )
+        ['apple', 'banana']
+        >>> duplicates([1, 2, 2, 4, 4, 4, 7])
+        [2, 4]
    
-#     You should do this without changing the original list::
+    You should do this without changing the original list::
    
-#         >>> orig = ["apple", "apple", "berry"]
-#         >>> duplicates(orig)
-#         ['apple']
-#         >>> orig
-#         ['apple', 'apple', 'berry']
-#     """
-
-#     return []
-
+        >>> orig = ["apple", "apple", "berry"]
+        >>> duplicates(orig)
+        ['apple']
+        >>> orig
+        ['apple', 'apple', 'berry']
+    """
+    dupes = []
+    for i in range(len(items)):
+        if items[i] in items[i+1:]:
+            if items[i] not in dupes:
+                dupes.append(items[i])
+    return dupes
 
 # def find_letter_indices(words, letter):
 #     """Return list of indices where letter appears in each word.
