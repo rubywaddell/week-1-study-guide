@@ -60,44 +60,55 @@ def n_long_words(words, n):
             long_words.append(word)
     return long_words
 
-# def smallest_int(numbers):
-#     """Find the smallest integer in a list of integers and return it.
-#     **DO NOT USE** the built-in function `min()`!
+def smallest_int(numbers):
+    """Find the smallest integer in a list of integers and return it.
+    **DO NOT USE** the built-in function `min()`!
     
-#     For example::
+    For example::
     
-#         >>> smallest_int([-5, 2, -5, 7])
-#         -5
-#         >>> smallest_int([3, 7, 2, 8, 4])
-#         2
+        >>> smallest_int([-5, 2, -5, 7])
+        -5
+        >>> smallest_int([3, 7, 2, 8, 4])
+        2
     
-#     If the input list is empty, return `None`::
+    If the input list is empty, return `None`::
     
-#         >>> smallest_int([]) is None
-#         True
-#     """
+        >>> smallest_int([]) is None
+        True
+    """
+    if numbers == []:
+        return None
+    else:
+        smallest = numbers[0]
+        for num in numbers:
+            if num <= smallest:
+                smallest = num
+        return smallest
 
-#     return 100
-
-
-# def largest_int(numbers):
-#     """Find the largest integer in a list of integers and return it.
-#     **DO NOT USE** the built-in function `max()`!
+def largest_int(numbers):
+    """Find the largest integer in a list of integers and return it.
+    **DO NOT USE** the built-in function `max()`!
     
-#     For example::
+    For example::
     
-#         >>> largest_int([-5, 2, -5, 7])
-#         7
-#         >>> largest_int([3, 7, 2, 8, 4])
-#         8
+        >>> largest_int([-5, 2, -5, 7])
+        7
+        >>> largest_int([3, 7, 2, 8, 4])
+        8
     
-#     If the input list is empty, return None::
+    If the input list is empty, return None::
     
-#         >>> largest_int([]) is None
-#         True
-#     """
-
-#     return 0
+        >>> largest_int([]) is None
+        True
+    """
+    if numbers == []:
+        return None
+    else:
+        biggest = numbers[0]
+        for num in numbers:
+            if num > biggest:
+                biggest = num
+        return biggest
 
 
 # def halvesies(numbers):
