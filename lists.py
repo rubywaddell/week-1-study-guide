@@ -188,23 +188,25 @@ def mult_numbers(numbers):
     return total
 
 
-# def join_strings(words):
-#     """Return a string of all input strings joined together.
-#     Python has a built-in method, `list.join()` --- but for
-#     this exercise, **you should not use it**.
+def join_strings(words):
+    """Return a string of all input strings joined together.
+    Python has a built-in method, `list.join()` --- but for
+    this exercise, **you should not use it**.
     
-#     For example::
+    For example::
     
-#         >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
-#         'spamspambaconballoonicorn'
+        >>> join_strings(["spam", "spam", "bacon", "balloonicorn"])
+        'spamspambaconballoonicorn'
     
-#     For an empty list, you should return an empty string::
+    For an empty list, you should return an empty string::
     
-#         >>> join_strings([])
-#         ''
-#     """
-
-#     return "Not the right thing"
+        >>> join_strings([])
+        ''
+    """
+    joined_words = ""
+    for word in words:
+        joined_words += word
+    return joined_words
 
 
 # def average(numbers):
