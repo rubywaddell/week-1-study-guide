@@ -127,10 +127,8 @@ def halvesies(numbers):
     """
     halves = []
     for num in numbers:
-        half = num/2
-        halves.append(half)
+        halves.append((num/2))
     return halves
-
 
 # def word_lengths(words):
 #     """Return the length of words in the input list.
