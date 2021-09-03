@@ -130,16 +130,18 @@ def halvesies(numbers):
         halves.append((num/2))
     return halves
 
-# def word_lengths(words):
-#     """Return the length of words in the input list.
+def word_lengths(words):
+    """Return the length of words in the input list.
     
-#     For example::
+    For example::
     
-#         >>> word_lengths(["hello", "hey", "hello", "spam"])
-#         [5, 3, 5, 4]
-#     """
-
-#     return []
+        >>> word_lengths(["hello", "hey", "hello", "spam"])
+        [5, 3, 5, 4]
+    """
+    lengths = []
+    for word in words:
+        lengths.append(len(word))
+    return lengths
 
 
 # def sum_numbers(numbers):
