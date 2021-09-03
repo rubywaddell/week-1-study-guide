@@ -41,22 +41,24 @@ def long_words(words):
             long_words.append(word)
     return long_words
 
-# def n_long_words(words, n):
-#     """Return words in list longer than `n` characters.
+def n_long_words(words, n):
+    """Return words in list longer than `n` characters.
     
-#     For example::
+    For example::
     
-#         >>> n_long_words(
-#         ...     ["hello", "hey", "spam", "spam", "bacon", "bacon"],
-#         ...     3
-#         ... )
-#         ['hello', 'spam', 'spam', 'bacon', 'bacon']
-#         >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
-#         ['apples', 'bananas']
-#     """
-
-#     return ['the wrong thing']
-
+        >>> n_long_words(
+        ...     ["hello", "hey", "spam", "spam", "bacon", "bacon"],
+        ...     3
+        ... )
+        ['hello', 'spam', 'spam', 'bacon', 'bacon']
+        >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
+        ['apples', 'bananas']
+    """
+    long_words = []
+    for word in words:
+        if len(word) > n:
+            long_words.append(word)
+    return long_words
 
 # def smallest_int(numbers):
 #     """Find the smallest integer in a list of integers and return it.
